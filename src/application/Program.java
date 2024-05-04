@@ -18,11 +18,11 @@ public class Program {
 		while (true) {
 			try {
 				UI.clearScreen();
-				UI.printBoard(chessMatch.getPieces());
+				UI.printMatch(chessMatch);
 				System.out.println();
 				System.out.print("Source: ");
 				ChessPosition source = UI.readChessPosition(sc);
-				
+
 				boolean[][] possiblesMoves = chessMatch.possiblesMoves(source);
 				UI.clearScreen();
 				UI.printBoard(chessMatch.getPieces(), possiblesMoves);
